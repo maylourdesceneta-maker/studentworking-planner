@@ -1,0 +1,202 @@
+.planner-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.planner-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.planner-header h2 {
+  font-size: 28px;
+  color: #333;
+  font-weight: 700;
+}
+
+.nav-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #764ba2;
+  transform: scale(1.05);
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: 700;
+  color: #667eea;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.calendar-day {
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 120px;
+  transition: all 0.3s ease;
+}
+
+.calendar-day.active {
+  cursor: pointer;
+}
+
+.calendar-day.active:hover {
+  background: #f0f0f0;
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+}
+
+.day-number {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.day-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.day-item {
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.day-item.task {
+  background: #e8f0fe;
+  color: #1976d2;
+}
+
+.day-item.task.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.day-item.schedule {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.day-item.schedule.type-class {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.day-item.schedule.type-work {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.item-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-priority {
+  font-size: 9px;
+  padding: 1px 3px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.item-time {
+  font-size: 9px;
+  flex-shrink: 0;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-color.task {
+  background: #1976d2;
+}
+
+.legend-color.schedule {
+  background: #f57c00;
+}
+
+@media (max-width: 768px) {
+  .planner-card {
+    padding: 15px;
+  }
+
+  .calendar-grid {
+    gap: 5px;
+  }
+
+  .calendar-day {
+    min-height: 100px;
+    padding: 8px;
+  }
+
+  .day-item {
+    font-size: 10px;
+  }
+}

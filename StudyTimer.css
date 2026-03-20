@@ -1,0 +1,271 @@
+.timer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timer-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Timer Card */
+.timer-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1 / -1;
+}
+
+.timer-mode {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.timer-mode.study {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.timer-mode.break {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.timer-display {
+  margin: 30px 0;
+}
+
+.timer-value {
+  font-size: 96px;
+  font-weight: 700;
+  color: #667eea;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  line-height: 1;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.control-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 24px;
+}
+
+.control-btn:hover {
+  background: #764ba2;
+  transform: scale(1.1);
+}
+
+.control-btn.reset {
+  background: #f44336;
+}
+
+.control-btn.reset:hover {
+  background: #d32f2f;
+}
+
+.control-btn.playing {
+  background: #ff9800;
+}
+
+.timer-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+/* Settings */
+.timer-settings {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.timer-settings h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.setting-row {
+  margin-bottom: 20px;
+}
+
+.setting-row label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.setting-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-control button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.setting-control button:hover {
+  background: #667eea;
+  color: white;
+}
+
+.setting-control input {
+  width: 60px;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.update-btn {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.update-btn:hover {
+  background: #764ba2;
+  transform: translateY(-2px);
+}
+
+/* Session History */
+.session-history {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.session-history h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.session-type {
+  font-size: 18px;
+}
+
+.session-duration {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 60px;
+}
+
+.session-time {
+  color: #999;
+  margin-left: auto;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .timer-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .timer-card {
+    padding: 30px 20px;
+  }
+
+  .timer-value {
+    font-size: 72px;
+  }
+
+  .control-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timer-stats {
+    gap: 15px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+}
